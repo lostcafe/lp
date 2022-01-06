@@ -31,14 +31,14 @@
 
     <div style="margin-bottom:20px;">
     <b-card border-variant="success">
-        <div class="notice_title notice_center">お知らせS</div>
+        <div class="common_title common_center">お知らせS</div>
         <b-card-text>
-          <li v-for="notice in notice.contents" :key="notice.id">
-        {{ notice.Notice_body }}
+          <li v-for="notices in notices.contents" :key="notices.id">
+        {{ notices.Notice_body }}
       <br><span class="date" style="float:right">
                   <time
-                    :datetime="notice.Notice_UpdateDate"
-                    v-text="$dateFns.format(new Date(notice.Notice_UpdateDate), 'yyyy.MM.dd')"
+                    :datetime="notices.Notice_UpdateDate"
+                    v-text="$dateFns.format(new Date(notices.Notice_UpdateDate), 'yyyy.MM.dd')"
                   />
       </span>
     </li>
@@ -122,16 +122,16 @@
         </template>
         <b-card-text>
 
-  <div class="notice">
-    <li v-for="blog in blog.contents" :key="blog.id">
-      <nuxt-link :to="`/${blog.id}`">
-        {{ blog.title }}
+  <div class="common">
+    <li v-for="blogs in blogs.contents" :key="blogs.id">
+      <nuxt-link :to="`/${blogs.id}`">
+        {{ blogs.title }}
       </nuxt-link>
       <span class="date ">
                   <time
-                    :datetime="blog.ReleaseDate"
+                    :datetime="blogs.ReleaseDate"
                     v-text="
-                      $dateFns.format(new Date(blog.ReleaseDate), 'yyyy.MM.dd')
+                      $dateFns.format(new Date(blogs.ReleaseDate), 'yyyy.MM.dd')
                     "
                   />
       </span>
@@ -154,10 +154,6 @@
 
 
 
-  <div class="notice">
-
-  </div>
-
 
 
 
@@ -177,12 +173,12 @@
 <script>
 export default {
   async asyncData({ $microcms }) {
-    const blog = await $microcms.get({
-      endpoint: 'blog',
+    const blogs = await $microcms.get({
+      endpoint: 'blogs',
     })
 
-    const notice = await $microcms.get({
-      endpoint: 'notice',
+    const notices = await $microcms.get({
+      endpoint: 'notices',
     })
 
     const activities = await $microcms.get({
@@ -190,8 +186,8 @@ export default {
     })
 
     return {
-      blog,
-      notice,
+      blogs,
+      notices,
       activities,
     }
   },
@@ -246,15 +242,15 @@ ul, li {
     list-style-type: none;
     }
 
-.notice {
+.common {
   display: block;
 }
 
-.notice li:nth-of-type(n+6) {
+.common li:nth-of-type(n+6) {
   display: none;
 }
 
-.notice a {
+.common a {
   display: block;
   width: 70%;
   float: left;
@@ -263,7 +259,7 @@ ul, li {
   white-space: nowrap;
 }
 
-.notice span {
+.common span {
   width: 25%;
   float: right;
   text-align: right;
@@ -271,11 +267,11 @@ ul, li {
   white-space: nowrap;
 }
 
-.notice_center {
+.common_center {
     text-align: center;
 }
 
-.notice_title {
+.common_title {
     font-weight:1000;
     font-size: 1.3rem;
     margin-bottom: 10px;
