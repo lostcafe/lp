@@ -33,12 +33,12 @@
     <b-card border-variant="success">
         <div class="common_title common_center">お知らせS</div>
         <b-card-text>
-          <li v-for="notices in notices.contents" :key="notices.id">
-        {{ notices.Notice_body }}
+          <li v-for="notice in notices.contents" :key="notice.id">
+        {{ notice.Notice_body }}
       <br><span class="date" style="float:right">
                   <time
-                    :datetime="notices.Notice_UpdateDate"
-                    v-text="$dateFns.format(new Date(notices.Notice_UpdateDate), 'yyyy.MM.dd')"
+                    :datetime="notice.Notice_UpdateDate"
+                    v-text="$dateFns.format(new Date(notice.Notice_UpdateDate), 'yyyy.MM.dd')"
                   />
       </span>
     </li>
@@ -95,12 +95,12 @@
         <h2 class="headingPrimary">活動内容</h2>
             <b-row class="Wrap_Link sectionPrimary" style="padding-bottom:0;padding-top:0;">
 
-                <b-col v-for="activities in activities.contents" :key="activities.id" class="Link_In col-sm-6 col-12 col-md-3 align-self-start">
+                <b-col v-for="activity in activities.contents" :key="activity.id" class="Link_In col-sm-6 col-12 col-md-3 align-self-start">
                     <div>
                     <img
-                      :src="activities.image.url" alt="のびのびタイム">
+                      :src="activity.image.url" alt="のびのびタイム">
                     </div>
-                    <span class="play_title">{{ activities.title }}</span><div>{{ activities.body }}</div>
+                    <span class="play_title">{{ activity.title }}</span><div>{{ activity.body }}</div>
                 </b-col>
                 
             </b-row>
@@ -123,15 +123,15 @@
         <b-card-text>
 
   <div class="common">
-    <li v-for="blogs in blogs.contents" :key="blogs.id">
+    <li v-for="blog in blogs.contents" :key="blog.id">
       <nuxt-link :to="`/${blogs.id}`">
-        {{ blogs.title }}
+        {{ blog.title }}
       </nuxt-link>
       <span class="date ">
                   <time
-                    :datetime="blogs.ReleaseDate"
+                    :datetime="blog.ReleaseDate"
                     v-text="
-                      $dateFns.format(new Date(blogs.ReleaseDate), 'yyyy.MM.dd')
+                      $dateFns.format(new Date(blog.ReleaseDate), 'yyyy.MM.dd')
                     "
                   />
       </span>
