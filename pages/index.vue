@@ -124,9 +124,7 @@
 
   <div class="common">
     <li v-for="blog in blogs.contents" :key="blog.id">
-      <nuxt-link :to="`/${blogs.id}`">
         {{ blog.title }}
-      </nuxt-link>
       <span class="date ">
                   <time
                     :datetime="blog.ReleaseDate"
