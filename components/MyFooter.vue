@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <p class="copyright">
-      <small>©️2021 SuperCityPJ All Rights Reserved.</small>
+      <small>©️2021 DY All Rights Reserved.</small>
     </p>
   </footer>
 </template>

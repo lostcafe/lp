@@ -23,15 +23,19 @@
 
 
 
+
+
     <MyButtons>
       </MyButtons>
 
 
 
 
+
+
     <div style="margin-bottom:20px;">
     <b-card border-variant="success">
-        <div class="common_title common_center">お知らせS</div>
+        <div class="common_title common_center">お知らせ</div>
         <b-card-text>
           <li v-for="notice in notices.contents" :key="notice.id">
         {{ notice.Notice_body }}
@@ -45,6 +49,8 @@
         </b-card-text>
     </b-card>
     </div>
+
+
 
 
 
@@ -89,6 +95,8 @@
 
 
 
+
+
   <div class="main">
   <section id="activities" class="sectionPrimary">
       <div class="container">
@@ -97,7 +105,7 @@
 
                 <b-col v-for="activity in activities.contents" :key="activity.id" class="Link_In col-sm-6 col-12 col-md-3 align-self-start">
                     <div>
-                    <img
+                    <img style="border-radius:3%"
                       :src="activity.image.url" alt="のびのびタイム">
                     </div>
                     <span class="play_title">{{ activity.title }}</span><div>{{ activity.body }}</div>
@@ -113,12 +121,48 @@
 
 
 
+
+
+
+
+  <div class="main">
+  <section id="monthly_event" class="sectionPrimary">
+      <div class="container">
+        <h2 class="headingPrimary">月間行事</h2>
+            <b-row class="Wrap_Link sectionPrimary flex-row-reverse" style="padding-bottom:0;padding-top:0;">
+
+                <b-col v-for="monthlyevent in monthlyevents.contents" :key="monthlyevent.id" class="col-sm-6 col-12 align-self-start">
+                    <span class="month"
+                      v-for="(res, resIndex) in monthlyevent.month"
+                      :key="resIndex"
+                      v-text="res"
+                    />：<a v-bind:href="monthlyevent.url">拡大してみる</a>
+                    <img
+                      :src="monthlyevent.image.url" alt="month">
+                </b-col>
+
+            </b-row>
+    </div>
+
+  </section>
+  </div>
+
+
+
+
+
+
+
+
+
+  <section id="news" class="sectionPrimary">
+
   <div style="margin-bottom:20px">
     <b-card-group deck>
 
-      <b-card header-tag="header" footer-tag="footer" class="rounded">
-        <template #header>
-          <h6 class="mb-0">ニュース</h6>
+      <b-card style="border:0px;">
+        <template>
+        <h2 class="headingPrimary">ニュース</h2>
         </template>
         <b-card-text>
 
@@ -140,18 +184,10 @@
 
         </b-card-text>
       </b-card>
-
-      <b-card title="title" header-tag="header" footer-tag="footer">
-        <template #header>
-          <h6 class="mb-0">行事日程</h6>
-        </template>
-        <b-card-text>Header and footers using slots.</b-card-text>
-        <b-button href="#" variant="primary">Go somewhere</b-button>
-      </b-card>
-
     </b-card-group>
   </div>
 
+  </section>
 
 
 
@@ -185,10 +221,15 @@ export default {
       endpoint: 'activities',
     })
 
+    const monthlyevents = await $microcms.get({
+      endpoint: 'monthlyevents',
+    })
+
     return {
       blogs,
       notices,
       activities,
+      monthlyevents,
     }
   },
 }
@@ -257,6 +298,9 @@ ul, li {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-size: 1.2rem;
+  color: #198754;
+  font-weight: 500;
 }
 
 .common span {
@@ -265,6 +309,18 @@ ul, li {
   text-align: right;
   color: #8c8c8c;
   white-space: nowrap;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 480px) {
+    .common a {
+      font-size: 0.9rem;
+    }
+
+    .common span {
+      font-size: 0.9rem;
+    }
+
 }
 
 .common_center {
@@ -281,6 +337,12 @@ ul, li {
 .play_title {
   font-size:1.2rem;
   font-weight: 1000;
+}
+
+.month {
+  font-size: 2rem;
+  font-weight: bold;
+  color:grey;
 }
 
   p {
@@ -345,7 +407,6 @@ img {
   object-fit: cover;
   width: 100%;
   height: 100%;
-  border-radius:3%;
   top: 0;
   bottom: 0;
   left: 0;

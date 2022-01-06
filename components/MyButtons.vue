@@ -4,57 +4,57 @@
             <b-row class="Wrap_Link">
 
                 <b-col class="Link_In col-4 col-md-2">
-                <nuxt-link to="/#about" title="利用案内">
+                <a href="/#about" title="利用案内">
                     <div>
                     <img src="http://school.gyo6.net/images/template/01125/main/link02.png" alt="利用案内">
                     </div>
                     <span>利用案内</span>
-                </nuxt-link>
+                </a>
                 </b-col>
 
                 <b-col class="Link_In col-4 col-md-2">
-                <nuxt-link to="/#activities" title="活動内容">
+                <a href="/#activities" title="活動内容">
                     <div>
                     <img src="http://school.gyo6.net/images/template/01125/main/link05.png" alt="活動内容">
                     </div>
                     <span>活動内容</span>
-                </nuxt-link>
+                </a>
                 </b-col>
 
                 <b-col class="Link_In col-4 col-md-2">
-                <nuxt-link to="/" title="月次行事">
+                <a href="/#monthly_event" title="月間行事">
                     <div>
                     <img src="http://school.gyo6.net/images/template/01125/main/link06.png" alt="月次行事">
                     </div>
-                    <span>月次行事</span>
-                </nuxt-link>
+                    <span>月間行事</span>
+                </a>
                 </b-col>
 
                 <b-col class="Link_In col-4 col-md-2">
-                <nuxt-link to="/" title="混雑状況">
+                <a href="/" title="混雑状況">
                     <div>
                     <img src="http://school.gyo6.net/images/template/01125/main/link04.png" alt="混雑状況">
                     </div>
                     <span>混雑状況</span>
-                </nuxt-link>
+                </a>
                 </b-col>
 
                 <b-col class="Link_In col-4 col-md-2">
-                <nuxt-link to="/" title="ニュース">
+                <a href="/#news" title="ニュース">
                     <div>
                     <img src="http://school.gyo6.net/images/template/01125/main/link01.png" alt="ニュース">
                     </div>
                     <span>ニュース</span>
-                </nuxt-link>
+                </a>
                 </b-col>
 
                 <b-col class="Link_In col-4 col-md-2">
-                <nuxt-link to="/" title="お問合せ">
+                <a href="/" title="お問合せ">
                     <div>
                     <img src="http://school.gyo6.net/images/template/01125/main/link03.png" alt="お問合せ">
                     </div>
                     <span>お問合せ</span>
-                </nuxt-link>
+                </a>
                 </b-col>
                 
             </b-row>
