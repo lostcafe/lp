@@ -101,17 +101,19 @@
   <section id="activities" class="sectionPrimary">
       <div class="container">
         <h2 class="headingPrimary">活動内容</h2>
-            <b-row class="Wrap_Link sectionPrimary" style="padding-bottom:0;padding-top:0;">
+            <b-row class="Wrap_Link sectionPrimary flex-row-reverse" style="padding-bottom:0;padding-top:0;">
 
                 <b-col v-for="activity in activities.contents" :key="activity.id" class="Link_In col-sm-6 col-12 col-md-3 align-self-start">
                     <div>
                     <img style="border-radius:3%"
-                      :src="activity.image.url" alt="のびのびタイム">
+                      :src="activity.image.url" alt="activity">
                     </div>
                     <span class="play_title">{{ activity.title }}</span><div>{{ activity.body }}</div>
                 </b-col>
-                
             </b-row>
+                    <p class="button-area">
+          <nuxt-link to="/activities" class="buttonPrimary">もっと見る</nuxt-link>
+        </p>
     </div>
 
   </section>
@@ -182,9 +184,13 @@
     </li>
   </div>
 
+
         </b-card-text>
       </b-card>
     </b-card-group>
+                          <p class="button-area">
+          <nuxt-link to="/blogs" class="buttonPrimary">もっと見る</nuxt-link>
+        </p>
   </div>
 
   </section>
@@ -211,6 +217,7 @@ export default {
   async asyncData({ $microcms }) {
     const blogs = await $microcms.get({
       endpoint: 'blogs',
+      queries: { limit: 6 },
     })
 
     const notices = await $microcms.get({
@@ -219,10 +226,12 @@ export default {
 
     const activities = await $microcms.get({
       endpoint: 'activities',
+      queries: { limit: 4 },
     })
 
     const monthlyevents = await $microcms.get({
       endpoint: 'monthlyevents',
+      queries: { limit: 2 },
     })
 
     return {
@@ -247,6 +256,7 @@ export default {
     letter-spacing: -1px;
     padding-right: 20px;
     padding-left: 20px;
+    justify-content:flex-end;
 }
 
 .Link_In {
@@ -393,7 +403,6 @@ ul, li {
   }
 
   .headingPrimary {
-    font-family: Ubuntu,sans-serif;
     font-size: 2.5rem;
     font-weight: 700;
     text-transform: capitalize;
@@ -411,5 +420,28 @@ img {
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.button-area {
+  text-align: center;
+  margin-top: 2em;
+}
+
+
+.buttonPrimary {
+    color: #010101;
+    display: inline-block;
+    font-family: Ubuntu,sans-serif;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-align: center;
+    text-indent: -1em;
+    line-height: 56px;
+    padding: 0 1em;
+    border: 2px solid;
+    border-radius: 4px;
+    min-width: 230px;
+    position: relative;
 }
 </style>
