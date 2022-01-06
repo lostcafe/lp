@@ -15,14 +15,11 @@
 </template>
 
 <script>
-export default {
-  computed: {
-    // TOPページかどうか
-    isTopPage() {
-      if (this.$route.name === 'index') return true
-      return false
-    },
-  },
+  import MyNavbar from '@/components/MyNavbar'
+  export default {
+components: {
+  MyNavbar,
+    }
 }
 </script>
 
