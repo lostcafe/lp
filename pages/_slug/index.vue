@@ -1,12 +1,14 @@
 <template>
   <b-container class="main">
     <h1 class="title">{{ blogs.title }}</h1>
-    <p class="ReleaseDate">
+    <div class="ReleaseDate">
                   <time
                     :datetime="blogs.ReleaseDate"
                     v-text="$dateFns.format(new Date(blogs.ReleaseDate), 'yyyy.MM.dd')"
                   />
-    </p>
+                  <div>{{blogs.body}}</div>
+
+    </div>
     <div class="post" v-html="body"></div>
   </b-container>
 </template>
