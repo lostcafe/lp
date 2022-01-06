@@ -123,15 +123,15 @@
         <b-card-text>
 
   <div class="common">
-    <li v-for="blog in blogs.contents" :key="blog.id">
+    <li v-for="blogs in blogs.contents" :key="blogs.id">
       <nuxt-link :to="`/${blogs.id}`">
-        {{ blog.title }}
+        {{ blogs.title }}
       </nuxt-link>
       <span class="date ">
                   <time
-                    :datetime="blog.ReleaseDate"
+                    :datetime="blogs.ReleaseDate"
                     v-text="
-                      $dateFns.format(new Date(blog.ReleaseDate), 'yyyy.MM.dd')
+                      $dateFns.format(new Date(blogs.ReleaseDate), 'yyyy.MM.dd')
                     "
                   />
       </span>
