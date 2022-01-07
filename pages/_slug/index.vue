@@ -20,7 +20,7 @@ export default {
       endpoint: `blogs/${params.slug}`,
     })
     return {
-      blogs,
+      blogs, 
     }
   },
 }

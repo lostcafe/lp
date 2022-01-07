@@ -238,7 +238,7 @@ export default {
       blogs,
       notices,
       activities,
-      monthlyevents,
+      monthlyevents, 
     }
   },
 }

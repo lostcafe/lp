@@ -33,7 +33,7 @@ export default {
       endpoint: `activities`,
     })
     return {
-      activities,
+      activities, 
     }
   },
 }

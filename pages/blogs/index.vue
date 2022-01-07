@@ -61,7 +61,7 @@ export default {
       endpoint: `blogs`,
     })
     return {
-      blogs,
+      blogs, 
     }
   },
 }

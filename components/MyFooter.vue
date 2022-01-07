@@ -23,7 +23,7 @@ components: {
   font-size:16px;
   color:#41b883;
   margin:200px 0 0 0;
-}
+} 
 
 .copyright {
   text-align: center;

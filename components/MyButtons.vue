@@ -107,13 +107,13 @@ components: {
 
 @media (max-width: 480px) {
     .Link_In {
-        padding-top: 10px;
-        padding-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     }
 
     .Link_In a div img {
-        width: 60px;
-        height: 60px;
+    width: 60px;
+    height: 60px;
     }
 }
 
