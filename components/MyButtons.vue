@@ -24,18 +24,18 @@
                 <b-col class="Link_In col-4 col-md-2">
                 <a href="/#monthly_event" title="月間行事">
                     <div>
-                    <img src="http://school.gyo6.net/images/template/01125/main/link06.png" alt="月次行事">
+                    <img src="http://school.gyo6.net/images/template/01125/main/link06.png" alt="月間行事">
                     </div>
                     <span>月間行事</span>
                 </a>
                 </b-col>
 
                 <b-col class="Link_In col-4 col-md-2">
-                <a href="/" title="混雑状況">
+                <a href="https://liff.line.me/1656795338-OXWpGk8D" title="混雑状況">
                     <div>
                     <img src="http://school.gyo6.net/images/template/01125/main/link04.png" alt="混雑状況">
                     </div>
-                    <span>混雑状況</span>
+                    <span>混雑確認/予約</span>
                 </a>
                 </b-col>
 
