@@ -31,9 +31,9 @@
                 </b-col>
 
                 <b-col class="Link_In col-4 col-md-2">
-                <a href="https://liff.line.me/1656795338-OXWpGk8D" title="混雑状況">
+                <a href="https://liff.line.me/1656795338-RBqjPVdy" title="混雑確認/予約">
                     <div>
-                    <img src="http://school.gyo6.net/images/template/01125/main/link04.png" alt="混雑状況">
+                    <img src="http://school.gyo6.net/images/template/01125/main/link04.png" alt="混雑確認/予約">
                     </div>
                     <span>混雑確認/予約</span>
                 </a>
