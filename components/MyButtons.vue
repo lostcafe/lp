@@ -6,7 +6,7 @@
                 <b-col class="Link_In col-4 col-md-2">
                 <a href="/#about" title="利用案内">
                     <div>
-                    <img src="http://school.gyo6.net/images/template/01125/main/link02.png" alt="利用案内">
+                    <img src="https://i.ibb.co/mvycm8s/link02-1.png" alt="利用案内">
                     </div>
                     <span>利用案内</span>
                 </a>
@@ -15,7 +15,7 @@
                 <b-col class="Link_In col-4 col-md-2">
                 <a href="/#activities" title="活動内容">
                     <div>
-                    <img src="http://school.gyo6.net/images/template/01125/main/link05.png" alt="活動内容">
+                    <img src="https://i.ibb.co/cTFKtdP/link02-1.png" alt="活動内容">
                     </div>
                     <span>活動内容</span>
                 </a>
@@ -24,7 +24,7 @@
                 <b-col class="Link_In col-4 col-md-2">
                 <a href="/#monthly_event" title="月間行事">
                     <div>
-                    <img src="http://school.gyo6.net/images/template/01125/main/link06.png" alt="月間行事">
+                    <img src="https://i.ibb.co/Dz166Ss/link03.png" alt="月間行事">
                     </div>
                     <span>月間行事</span>
                 </a>
@@ -33,7 +33,7 @@
                 <b-col class="Link_In col-4 col-md-2">
                 <a href="https://liff.line.me/1656795338-RBqjPVdy" title="混雑確認/予約">
                     <div>
-                    <img src="http://school.gyo6.net/images/template/01125/main/link04.png" alt="混雑確認/予約">
+                    <img src="https://i.ibb.co/8X4nK8f/link04.png" alt="混雑確認/予約">
                     </div>
                     <span>混雑確認/予約</span>
                 </a>
@@ -42,7 +42,7 @@
                 <b-col class="Link_In col-4 col-md-2">
                 <a href="/#news" title="ニュース">
                     <div>
-                    <img src="http://school.gyo6.net/images/template/01125/main/link01.png" alt="ニュース">
+                    <img src="https://i.ibb.co/SK5SJ1G/link02-1.png" alt="ニュース">
                     </div>
                     <span>ニュース</span>
                 </a>
@@ -51,7 +51,7 @@
                 <b-col class="Link_In col-4 col-md-2">
                 <a href="/" title="お問合せ">
                     <div>
-                    <img src="http://school.gyo6.net/images/template/01125/main/link03.png" alt="お問合せ">
+                    <img src="https://i.ibb.co/YTv4cr4/link06.png" alt="お問合せ">
                     </div>
                     <span>お問合せ</span>
                 </a>
