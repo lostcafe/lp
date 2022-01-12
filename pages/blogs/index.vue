@@ -84,10 +84,6 @@ export default {
   display: block;
 }
 
-.common li:nth-of-type(n+6) {
-  display: none;
-}
-
 .common a {
   display: block;
   width: 70%;

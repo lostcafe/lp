@@ -155,8 +155,6 @@
 
 
 
-
-
   <section id="news" class="sectionPrimary">
 
   <div style="margin-bottom:20px">
@@ -217,7 +215,7 @@ export default {
   async asyncData({ $microcms }) {
     const blogs = await $microcms.get({
       endpoint: 'blogs',
-      queries: { limit: 6 },
+      queries: { limit: 5 },
     })
 
     const notices = await $microcms.get({
@@ -242,6 +240,7 @@ export default {
     }
   },
 }
+
 </script>
 
 <style scoped>
@@ -295,10 +294,6 @@ ul, li {
 
 .common {
   display: block;
-}
-
-.common li:nth-of-type(n+6) {
-  display: none;
 }
 
 .common a {
