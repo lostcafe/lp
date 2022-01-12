@@ -72,11 +72,11 @@
               </p>
               <dl class="profile__item">
                 <dt class="profile__title">■住所</dt>
-                <dd>　東広島市西条町御薗宇0000-0</dd>
+                <dd>　東広島市○○町○○○</dd>
               </dl>
               <dl class="profile__item">
                 <dt class="profile__title">■電話番号</dt>
-                <dd>　082-00X-0X22</dd>
+                <dd>　082-00X-0XX2</dd>
               </dl>
               <dl class="profile__item">
                 <dt class="profile__title">■開放日時</dt>
@@ -144,6 +144,7 @@
                 </b-col>
 
             </b-row>
+            引用：<a href="https://www.city.higashihiroshima.lg.jp/soshiki/kodomomirai/1/5_1/8414.html">福富子育て支援センター【ほほえみ】</a>
     </div>
 
   </section>
